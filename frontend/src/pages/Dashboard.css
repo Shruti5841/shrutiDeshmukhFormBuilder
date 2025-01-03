@@ -1,0 +1,399 @@
+.dashboard-container {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 2rem;
+}
+
+.workspace-header {
+  margin-right: 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.workspace-title {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.workspace-title h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #333;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #1a73e8;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.share-button {
+  padding: 0.5rem 1.5rem;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.folder-actions {
+  margin: 2rem 0;
+}
+
+.create-folder-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-folder-btn .icon {
+  font-size: 1.2rem;
+}
+
+.content-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.create-form-card {
+  aspect-ratio: 1;
+  background-color: #1a73e8;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.create-form-card:hover {
+  transform: translateY(-5px);
+}
+
+.plus-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.folder-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.folder-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.folder-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.folder-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.folder-actions button {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.folder-actions button:hover {
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.modal-content h2 {
+  margin-bottom: 1.5rem;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.modal-actions button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-actions button.primary {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+}
+
+.modal-actions button.danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.create-form-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.forms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.form-card-content {
+  padding: 1.5rem;
+}
+
+.form-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.stat i {
+  color: #1a73e8;
+}
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.action-button {
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+}
+
+.action-button:hover {
+  opacity: 0.8;
+}
+
+.action-button.view {
+  background-color: #4CAF50;
+}
+
+.action-button.responses {
+  background-color: #2196F3;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+  transition: opacity 0.3s;
+}
+
+.action-button.responses:hover {
+  opacity: 0.9;
+}
+
+.action-button.edit {
+  background-color: #FF9800;
+}
+
+.folder-select {
+  width: calc(100% - 2rem);
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: white;
+  margin: 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.folder-select:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+.folder-select option {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 0.5rem;
+} 
+
+
+/* Add this to your existing Dashboard.css */
+
+.folders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the size as needed */
+  gap: 1rem; /* Space between cards */
+}
+
+.folder-card {
+  background: rgba(255, 255, 255, 0.1); /* Card background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 1rem; /* Inner padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  height: 200px; /* Fixed height for square shape */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.folder-header {
+  display: flex;
+  justify-content: space-between; /* Space between title and actions */
+  align-items: center; /* Center items vertically */
+}
+
+.folder-forms {
+  flex-grow: 1; /* Allow forms section to grow */
+  display: flex;
+  flex-direction: column; /* Stack forms vertically */
+  justify-content: flex-start; /* Align forms to the top */
+}
+
+.folder-form-item {
+  margin-top: 0.5rem; /* Space between form items */
+  color: #666; /* Text color */
+}

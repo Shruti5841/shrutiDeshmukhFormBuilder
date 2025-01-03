@@ -1,0 +1,14 @@
+# for the frontend node modules
+frontend/node_modules
+
+# for the backend node modules
+backend/node_modules
+
+# uploads folder form backend
+backend/uploads 
+
+# .env file from backend
+backend/.env
+
+# .env file from frontend
+frontend/.env

@@ -1,0 +1,135 @@
+.form-submission-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.field-container {
+  margin-bottom: 1.5rem;
+}
+
+.field-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.required {
+  color: #ff4444;
+  margin-left: 0.25rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: white;
+}
+
+.date-input {
+  cursor: pointer;
+}
+
+.rating-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rating-star {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+  padding: 0;
+}
+
+.rating-star.active {
+  opacity: 1;
+  color: #ffd700;
+}
+
+.file-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-input-label {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.file-input-label:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.file-preview {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 4px;
+}
+
+.buttons-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.button-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button-option:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.submit-button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background: #1557b0;
+}
+
+.submission-success {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.submission-success h2 {
+  color: #4CAF50;
+  margin-bottom: 1rem;
+} 

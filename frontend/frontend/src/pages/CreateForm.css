@@ -1,0 +1,386 @@
+.form-builder-container {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.builder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-name-input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  width: 200px;
+}
+
+.header-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: white;
+  border-bottom: 2px solid #1a73e8;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.toggle-slider {
+  width: 40px;
+  height: 20px;
+  background: #333;
+  border-radius: 10px;
+  position: relative;
+}
+
+.share-btn, .save-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.share-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.save-btn {
+  background: #1a73e8;
+  color: white;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.builder-content {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+.field-types-sidebar {
+  width: 300px;
+  padding: 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-y: auto;
+}
+
+.field-category {
+  margin-bottom: 2rem;
+}
+
+.field-category h3 {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.field-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.field-type-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.field-type-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.field-icon {
+  font-size: 1.5rem;
+}
+
+.field-label {
+  font-size: 0.9rem;
+}
+
+.form-building-area {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.start-icon {
+  font-size: 3rem;
+}
+
+.fields-flow {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.field-block {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  cursor: move;
+}
+
+.field-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.field-connector {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.field-connector::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.options-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.options-container input {
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: white;
+}
+
+.options-container button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #1a73e8;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.field-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drag-handle {
+  cursor: move;
+  margin-right: 1rem;
+  color: #666;
+}
+
+.field-number {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+.field-actions {
+  margin-left: auto;
+}
+
+.field-actions button {
+  background: none;
+  border: none;
+  color: #ff4444;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.field-label-input {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: white;
+  margin: 1rem 0;
+}
+
+.field-settings {
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.field-settings label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+}
+
+/* Field-specific styles */
+.field-input-container {
+  padding: 1rem;
+}
+
+.rating-config {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.button-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.add-option-btn {
+  background: #1a73e8;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* Drag and drop styles */
+.fields-flow {
+  min-height: 200px;
+  padding: 1rem;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+/* Add these new styles */
+.field-preview-input {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.button-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.remove-option {
+  background: none;
+  border: none;
+  color: #ff4444;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.rating-select {
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: white;
+}
+
+.rating-preview {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.rating-star {
+  color: #ffd700;
+}
+
+.media-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.media-preview {
+  max-width: 200px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.media-preview img {
+  width: 100%;
+  height: auto;
+} 

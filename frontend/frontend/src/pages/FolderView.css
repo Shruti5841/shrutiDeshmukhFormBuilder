@@ -1,0 +1,60 @@
+.folder-view-container {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 2rem;
+}
+
+.folder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.folder-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.folder-title h1 {
+  font-size: 2rem;
+  background: linear-gradient(45deg, #ff8a00, #ff4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-count {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.back-button {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+}
+
+.stat i {
+  font-size: 0.9rem;
+} 

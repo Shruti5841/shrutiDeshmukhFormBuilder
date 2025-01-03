@@ -1,0 +1,233 @@
+.register-container {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #0f1117;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
+  .back-button {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+  }
+  
+  .back-button:hover {
+    opacity: 0.8;
+  }
+  
+  .logo-container {
+    position: absolute;
+    top: 50%;
+    left: 4rem;
+    transform: translateY(-50%);
+  }
+  
+  .logo {
+    width: 120px;
+    height: 120px;
+    /* background-color: #ff9500; */
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    /* transform: rotate(90deg); */
+  }
+  
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .top-right {
+    width: 300px;
+    height: 300px;
+    background-color: #ff9797;
+    top: -150px;
+    right: -150px;
+  }
+  
+  .bottom-right {
+    width: 400px;
+    height: 400px;
+    background-color: #ffa07a;
+    bottom: -200px;
+    right: -200px;
+  }
+  
+  .register-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .register-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Rest of the styles remain the same from your provided CSS */
+  
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+  }
+  
+  .form-group input {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #0066ff;
+  }
+  
+  .form-group input::placeholder {
+    color: #666;
+  }
+  
+  .form-group input.error {
+    border-color: #ff4444;
+  }
+  
+  .error-message {
+    color: #ff4444;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+  
+  .signup-button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: none;
+    background-color: #0066ff;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .signup-button:hover {
+    background-color: #0052cc;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #666;
+    margin: 0.5rem 0;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .divider span {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .google-button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .google-button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .google-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .login-prompt {
+    text-align: center;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+  }
+  
+  .login-link {
+    color: #0066ff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .login-link:hover {
+    color: #0052cc;
+  }
+  
+  @media (max-width: 768px) {
+    .register-container {
+      padding: 1rem;
+    }
+  
+    .logo-container {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      margin: 2rem 0;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .back-button {
+      top: 1rem;
+      left: 1rem;
+    }
+  
+    .decorative-circle {
+      display: none;
+    }
+  }
+  
