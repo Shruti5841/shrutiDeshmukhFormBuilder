@@ -12,10 +12,11 @@ const path = require('path');
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: 'https://frolicking-klepon-53ebb7.netlify.app', // Vite's default port
-  credentials: true
-}));
+// app.use(cors({
+//   origin: 'https://frolicking-klepon-53ebb7.netlify.app', // Vite's default port
+//   credentials: true
+// }));
+app.use(cors());
 app.use(express.json());
 
 // Simple welcome route
