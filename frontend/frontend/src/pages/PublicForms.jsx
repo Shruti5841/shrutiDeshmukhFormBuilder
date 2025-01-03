@@ -11,7 +11,7 @@ const PublicForms = () => {
     const fetchPublicForms = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:5000/api/forms/public');
+        const response = await fetch('https://shrutideshmukhformbuilderfinal.onrender.com/api/forms/public');
         if (!response.ok) {
           throw new Error('Failed to fetch forms');
         }

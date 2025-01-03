@@ -15,7 +15,7 @@ const FolderView = () => {
 
   const fetchFolderDetails = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/folders/${folderId}`, {
+      const response = await fetch(`https://shrutideshmukhformbuilderfinal.onrender.com/api/folders/${folderId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

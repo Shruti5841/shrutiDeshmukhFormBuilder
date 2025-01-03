@@ -12,7 +12,7 @@ const EditForm = () => {
   useEffect(() => {
     const fetchForm = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/forms/${id}`, {
+        const response = await fetch(`https://shrutideshmukhformbuilderfinal.onrender.com/api/forms/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -30,7 +30,7 @@ const EditForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5000/api/forms/${id}`, {
+      const response = await fetch(`https://shrutideshmukhformbuilderfinal.onrender.com/api/forms/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -22,7 +22,7 @@ const FormResponses = () => {
 
   const fetchResponses = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/forms/${id}/responses`, {
+      const response = await fetch(`https://shrutideshmukhformbuilderfinal.onrender.com/api/forms/${id}/responses`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 

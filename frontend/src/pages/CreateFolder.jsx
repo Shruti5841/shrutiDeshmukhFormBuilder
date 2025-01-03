@@ -13,7 +13,7 @@ const CreateFolder = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/folders', {
+      const response = await fetch('https://shrutideshmukhformbuilderfinal.onrender.com/api/folders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

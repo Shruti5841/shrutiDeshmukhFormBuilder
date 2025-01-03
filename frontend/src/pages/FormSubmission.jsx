@@ -14,7 +14,7 @@ const FormSubmission = () => {
 
   const fetchForm = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/forms/${id}`);
+      const response = await fetch(`https://shrutideshmukhformbuilderfinal.onrender.com/api/forms/${id}`);
       const data = await response.json();
       setForm(data);
       // Initialize answers object
@@ -49,7 +49,7 @@ const FormSubmission = () => {
 
       formData.append('answers', JSON.stringify(answersArray));
 
-      const response = await fetch(`http://localhost:5000/api/forms/${id}/submit`, {
+      const response = await fetch(`https://shrutideshmukhformbuilderfinal.onrender.com/api/forms/${id}/submit`, {
         method: 'POST',
         body: formData
       });

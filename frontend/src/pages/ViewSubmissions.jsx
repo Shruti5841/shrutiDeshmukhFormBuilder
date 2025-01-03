@@ -13,10 +13,10 @@ const ViewSubmissions = () => {
     const fetchData = async () => {
       try {
         const [formResponse, submissionsResponse] = await Promise.all([
-          fetch(`http://localhost:5000/api/forms/${id}`, {
+          fetch(`https://shrutideshmukhformbuilderfinal.onrender.com/api/forms/${id}`, {
             headers: { Authorization: `Bearer ${token}` }
           }),
-          fetch(`http://localhost:5000/api/submissions/form/${id}`, {
+          fetch(`https://shrutideshmukhformbuilderfinal.onrender.com/api/submissions/form/${id}`, {
             headers: { Authorization: `Bearer ${token}` }
           })
         ]);

@@ -21,7 +21,7 @@ const Dashboard = () => {
 
   const fetchFolders = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/folders', {
+      const response = await fetch('https://shrutideshmukhformbuilderfinal.onrender.com/api/folders', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -35,7 +35,7 @@ const Dashboard = () => {
 
   const fetchForms = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/forms', {
+      const response = await fetch('https://shrutideshmukhformbuilderfinal.onrender.com/api/forms', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -49,7 +49,7 @@ const Dashboard = () => {
 
   const handleCreateFolder = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/folders', {
+      const response = await fetch('https://shrutideshmukhformbuilderfinal.onrender.com/api/folders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ const Dashboard = () => {
 
   const handleDeleteFolder = async (folderId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/folders/${folderId}`, {
+      const response = await fetch(`https://shrutideshmukhformbuilderfinal.onrender.com/api/folders/${folderId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`
@@ -89,7 +89,7 @@ const Dashboard = () => {
 
   const addFormToFolder = async (formId, folderId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/folders/${folderId}/forms/${formId}`, {
+      const response = await fetch(`https://shrutideshmukhformbuilderfinal.onrender.com/api/folders/${folderId}/forms/${formId}`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`
